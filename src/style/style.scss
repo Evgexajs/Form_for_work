@@ -1,7 +1,7 @@
 * {
     margin: 0;
     padding: 0;
-    color: white;
+    h1, p {color: white; padding: 0 0 5px 0;}
 }
 
 body {
@@ -18,6 +18,26 @@ body {
 }
 
 form {
-    text-align: center;
-    div { margin: 10px 0; }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    div {margin: 10px 0;}
+    input, textarea, select, button {
+        padding: 5px;
+        width: 25vw;
+        height: 4vh;
+        border-radius: 7px;
+        border-width: 0;
+    }
+    textarea {height: 10vh;}
+    button {
+        background-color: white;
+    }
+
+}
+
+.form {
+    width: 40vw;
+    h1 {text-align: center;}
+    &__file {color:white}
 }

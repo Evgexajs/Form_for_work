@@ -3,8 +3,9 @@ import '../style/style.css';
 
 function FormContact (props) {
   return (
+    <div className="form">
+      <h1>Форма обратной связи</h1>
       <form method='POST'>
-          <h2>Форма обратной связи</h2>
           <div className='form__name'>
             <p>Имя</p>
             <input type="text"/>
@@ -32,12 +33,13 @@ function FormContact (props) {
           </div>
           <div>
             <p>Картинка*</p>
-            <input type="file" name="image" accept="image/png,image/jpeg" />
+            <input type="file" name="image" accept="image/png,image/jpeg" className='form__file'/>
           </div>
           <div>
-              <button>Send</button>
+              <button>Отправить</button>
           </div>
       </form>
+    </div>
     );
 }
 

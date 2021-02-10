@@ -1,7 +1,11 @@
 * {
   margin: 0;
   padding: 0;
+}
+
+* h1, * p {
   color: white;
+  padding: 0 0 5px 0;
 }
 
 body {
@@ -23,10 +27,47 @@ body {
 }
 
 form {
-  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 form div {
   margin: 10px 0;
+}
+
+form input, form textarea, form select, form button {
+  padding: 5px;
+  width: 25vw;
+  height: 4vh;
+  border-radius: 7px;
+  border-width: 0;
+}
+
+form textarea {
+  height: 10vh;
+}
+
+form button {
+  background-color: white;
+}
+
+.form {
+  width: 40vw;
+}
+
+.form h1 {
+  text-align: center;
+}
+
+.form__file {
+  color: white;
 }
 /*# sourceMappingURL=style.css.map */
