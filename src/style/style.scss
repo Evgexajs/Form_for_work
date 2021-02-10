@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background: #1184F9;
+    background: -webkit-linear-gradient(top left, #1184F9, #462739);
+    background: -moz-linear-gradient(top left, #1184F9, #462739);
+    background: linear-gradient(to bottom right, #1184F9, #462739);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    text-align: center;
+    div { margin: 10px 0; }
+}
