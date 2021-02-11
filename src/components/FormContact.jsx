@@ -9,6 +9,7 @@ function FormContact (props) {
   const [message, setMessage] = useState('')
   const [file, setFile] = useState('')
   const [formValid, setFormValid] = useState(false)
+  const [dataForm, setDataForm] = useState({})
 
   const [nameEmpty, setNameEmpty] = useState(false)
   const [lastnameEmpty, setLastnameEmpty] = useState (false)
@@ -107,13 +108,27 @@ function FormContact (props) {
       setFormValid(false)
     } else {
       setFormValid(true)
+      setDataForm({
+        name: name,
+        lastname: lastname,
+        email: email,
+        category: category,
+        message: message,
+        file: file,
+      })
     }    
   }, [nameError, lastnameError, emailError, categoryError, messageError, fileError]);
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    let jsonDataForm = JSON.stringify(dataForm)
+    console.log(jsonDataForm)
+  }
 
   return (
     <div className="form">
       <h1>Форма обратной связи</h1>
-      <form method='POST'>
+      <form onSubmit={handleSubmit}>
           <div className='form__name'>
             <p>Имя</p>
             <input value={name} onChange={e => nameHandler(e)} onBlur={e => blurHandler(e)} name="name" type="text"/>
