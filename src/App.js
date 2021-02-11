@@ -5,7 +5,7 @@ import FormContact from './components/FormContact.jsx'
 function App() {
   return (
     <div>
-        <FormContact />
+      <FormContact />
     </div>
   );
 }
